@@ -24,13 +24,17 @@ Sistema completo para análise de vídeos com **Reconhecimento Facial**, **Detec
 - Categorias detectadas: Feliz, Triste, Neutro, Surpreso
 - Exibe a emoção de cada rosto identificado no vídeo processado
 
-### 3. Detecção de Atividades
-- Analisa a intensidade de movimento entre frames
-- Categorias de atividades:
-  - **Movimento Intenso**: Alta atividade na cena
-  - **Movimento Moderado**: Atividade média
-  - **Movimento Leve**: Baixa atividade
-  - **Estático**: Pouca ou nenhuma movimentação
+### 3. Detecção de Atividades Detalhadas
+Sistema avançado que classifica atividades específicas baseado em múltiplos fatores:
+- **Análise de movimento regional**: Avalia movimento em diferentes áreas do frame
+- **Detecção de mãos/pele**: Identifica regiões de mãos para análise contextual
+- **Postura corporal**: Detecta corpos superiores e posicionamento
+
+**Categorias de Atividades Detectadas:**
+- **Conversando / Ocioso**: Pessoa presente com baixo a moderado movimento, sem atividade específica
+- **Trabalhando (PC)**: Movimento concentrado na região média, indicando uso de computador
+- **Lendo / Estudando**: Movimento muito baixo e estável, foco visual concentrado
+- **Usando Celular**: Mão próxima ao rosto, movimento concentrado na região superior
 
 ### 4. Detecção de Anomalias
 Sistema inteligente que identifica comportamentos atípicos:
@@ -164,10 +168,22 @@ Relatório completo em formato JSON com:
     "Surpreso": 50
   },
   "atividades_detectadas": {
-    "Movimento Moderado": 800,
-    "Movimento Leve": 500,
-    "Movimento Intenso": 150,
-    "Estático": 50
+    "Conversando / Ocioso": {
+      "frames": 1042,
+      "porcentagem": 69.5
+    },
+    "Trabalhando (PC)": {
+      "frames": 234,
+      "porcentagem": 15.6
+    },
+    "Lendo / Estudando": {
+      "frames": 81,
+      "porcentagem": 5.4
+    },
+    "Usando Celular": {
+      "frames": 50,
+      "porcentagem": 3.3
+    }
   },
   "anomalias": [
     {
@@ -212,17 +228,23 @@ Feliz: 1200 detecções
 Triste: 150 detecções
 Surpreso: 50 detecções
 
-ATIVIDADES DETECTADAS
+ATIVIDADES DETECTADAS (COM PORCENTAGENS)
 --------------------------------------------------------------------------------
-Movimento Moderado: 800 frames
-Movimento Leve: 500 frames
-Movimento Intenso: 150 frames
-Estático: 50 frames
+• 69.5% - Conversando / Ocioso (1042 frames)
+• 15.6% - Trabalhando (PC) (234 frames)
+• 5.4% - Lendo / Estudando (81 frames)
+• 3.3% - Usando Celular (50 frames)
 
 RESUMO EXECUTIVO
 --------------------------------------------------------------------------------
 Emoção predominante: Neutro (1800 detecções)
-Atividade predominante: Movimento Moderado (800 frames)
+
+Distribuição de Atividades:
+  • 69.5% - Conversando / Ocioso (1042 frames)
+  • 15.6% - Trabalhando (PC) (234 frames)
+  • 5.4% - Lendo / Estudando (81 frames)
+  • 3.3% - Usando Celular (50 frames)
+
 Total de anomalias: 8
 Tipos de anomalias detectadas:
   - Movimento Brusco: 5 ocorrências
@@ -281,16 +303,41 @@ elif olhos < 2: → Surpreso
 else: → Neutro
 ```
 
-### Detecção de Movimento
-- Calcula diferença absoluta entre frames consecutivos
-- Threshold binário para identificar áreas de movimento
-- Intensidade normalizada: 0.0 (sem movimento) a 1.0 (movimento total)
+### Detecção de Atividades Detalhadas
 
-**Classificação de Atividades:**
-- Intensidade > 0.15: Movimento Intenso
-- Intensidade > 0.05: Movimento Moderado
-- Intensidade > 0.01: Movimento Leve
-- Intensidade ≤ 0.01: Estático
+O sistema usa uma combinação de técnicas para identificar atividades específicas:
+
+**1. Conversando / Ocioso** - Detectado quando:
+- Pessoa presente na cena (rosto detectado)
+- Movimento baixo a moderado (intensidade < 0.15)
+- Sem padrões específicos de outras atividades
+- Movimento distribuído pela cena
+
+**2. Trabalhando (PC)** - Detectado quando:
+- Movimento concentrado na região média do frame
+- Intensidade de movimento moderada (0.02-0.15)
+- Rosto presente na cena
+- Padrão consistente de movimento na mesma região
+
+**3. Lendo / Estudando** - Detectado quando:
+- Movimento muito baixo e estável (< 0.05)
+- Rosto presente e em posição fixa
+- Movimento concentrado na região superior
+- Baixa variabilidade no movimento ao longo do tempo
+
+**4. Usando Celular** - Detectado quando:
+- Mão detectada próxima ao rosto (< 150 pixels)
+- Movimento concentrado na região superior
+- Padrão característico de mão elevada
+
+**Algoritmo de Classificação:**
+```python
+Prioridade de detecção:
+1. Usando Celular (mão próxima ao rosto + movimento superior)
+2. Trabalhando PC (movimento região média + consistência)
+3. Lendo/Estudando (baixo movimento + estabilidade)
+4. Conversando/Ocioso (padrão default com rosto presente)
+```
 
 ### Detecção de Anomalias
 
