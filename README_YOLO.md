@@ -434,14 +434,7 @@ Opções:
 - Infere atividades inteligentemente
 - Perfeito para análise profissional
 
-**Para o Tech Challenge:**
-- ✅ Atende todos os requisitos
-- ✅ Diferencial competitivo
-- ✅ Demonstra domínio de IA avançada
-- ✅ Resultados impressionantes
 
 ---
 
-**🚀 Análise de vídeo no estado da arte com YOLOv8!**
 
-*A versão mais avançada para detecção de atividades em vídeo.*
