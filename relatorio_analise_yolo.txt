@@ -1,0 +1,1634 @@
+================================================================================
+RELATÓRIO DE ANÁLISE DE VÍDEO COM YOLO
+================================================================================
+
+INFORMAÇÕES DO VÍDEO
+--------------------------------------------------------------------------------
+Video Path: input_video.mp4
+Data Analise: 2026-01-05T21:59:36.592744
+Fps: 30.0
+Resolucao: 1280x720
+Tecnologia: YOLOv8 + OpenCV
+Modelo Yolo: YOLOv8-nano
+
+MÉTRICAS GERAIS
+--------------------------------------------------------------------------------
+Total Frames Analisados: 3326
+Duracao Video Segundos: 110.86666666666666
+Total Rostos Detectados: 2111
+Media Rostos Por Frame: 0.63
+Numero Anomalias Detectadas: 173
+Total Objetos Unicos Detectados: 15
+
+ATIVIDADES DETECTADAS (COM PORCENTAGENS)
+--------------------------------------------------------------------------------
+• 40.2% - Conversando / Ocioso (1338 frames)
+• 37.1% - Sem Detecção (1233 frames)
+• 14.1% - Trabalhando (PC) (470 frames)
+• 5.1% - Lendo / Estudando (170 frames)
+• 2.5% - Usando Celular (82 frames)
+• 1.0% - None (33 frames)
+
+OBJETOS MAIS DETECTADOS
+--------------------------------------------------------------------------------
+• person: 5166 detecções
+• chair: 1648 detecções
+• potted plant: 781 detecções
+• laptop: 515 detecções
+• couch: 239 detecções
+• dining table: 212 detecções
+• book: 180 detecções
+• cell phone: 82 detecções
+• cup: 59 detecções
+• umbrella: 36 detecções
+
+EMOÇÕES DETECTADAS
+--------------------------------------------------------------------------------
+Neutro: 1498 detecções
+Feliz: 561 detecções
+Triste: 52 detecções
+
+RESUMO EXECUTIVO
+--------------------------------------------------------------------------------
+Emoção predominante: Neutro (1498 detecções)
+
+Distribuição de Atividades (detectadas por YOLO):
+  • 40.2% - Conversando / Ocioso (1338 frames)
+  • 37.1% - Sem Detecção (1233 frames)
+  • 14.1% - Trabalhando (PC) (470 frames)
+  • 5.1% - Lendo / Estudando (170 frames)
+  • 2.5% - Usando Celular (82 frames)
+  • 1.0% - None (33 frames)
+
+Objetos mais detectados:
+  • person: 5166 detecções
+  • chair: 1648 detecções
+  • potted plant: 781 detecções
+  • laptop: 515 detecções
+  • couch: 239 detecções
+
+Total de anomalias: 173
+Tipos de anomalias detectadas:
+  - Movimento Brusco: 28 ocorrências
+  - Inatividade Súbita: 136 ocorrências
+  - Mudança de Pessoas na Cena: 9 ocorrências
+
+DETALHES DAS ANOMALIAS
+--------------------------------------------------------------------------------
+
+Anomalia 1:
+  Frame: 181
+  Timestamp: 6.03s
+  Tipo: Movimento Brusco
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person, potted plant, potted plant
+  Intensidade de Movimento: 0.792
+  Número de Rostos: 1
+
+Anomalia 2:
+  Frame: 188
+  Timestamp: 6.27s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person, potted plant
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 2
+
+Anomalia 3:
+  Frame: 194
+  Timestamp: 6.47s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person, potted plant
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 3
+
+Anomalia 4:
+  Frame: 199
+  Timestamp: 6.63s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person, potted plant, chair
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 2
+
+Anomalia 5:
+  Frame: 205
+  Timestamp: 6.83s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person, potted plant
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 6:
+  Frame: 212
+  Timestamp: 7.07s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person, potted plant
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 7:
+  Frame: 218
+  Timestamp: 7.27s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person, person, potted plant
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 8:
+  Frame: 224
+  Timestamp: 7.47s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person, potted plant, potted plant
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 2
+
+Anomalia 9:
+  Frame: 229
+  Timestamp: 7.63s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person, potted plant, potted plant
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 2
+
+Anomalia 10:
+  Frame: 235
+  Timestamp: 7.83s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person, potted plant, potted plant
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 2
+
+Anomalia 11:
+  Frame: 242
+  Timestamp: 8.07s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person, potted plant, potted plant
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 2
+
+Anomalia 12:
+  Frame: 247
+  Timestamp: 8.23s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person, potted plant, potted plant, couch
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 13:
+  Frame: 254
+  Timestamp: 8.47s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person, potted plant, couch
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 14:
+  Frame: 259
+  Timestamp: 8.63s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person, potted plant
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 2
+
+Anomalia 15:
+  Frame: 361
+  Timestamp: 12.03s
+  Tipo: Mudança de Pessoas na Cena
+  Atividade no momento: Sem Detecção
+  Objetos detectados: 
+  Intensidade de Movimento: 0.755
+  Número de Rostos: 0
+
+Anomalia 16:
+  Frame: 362
+  Timestamp: 12.07s
+  Tipo: Mudança de Pessoas na Cena
+  Atividade no momento: Sem Detecção
+  Objetos detectados: 
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 17:
+  Frame: 387
+  Timestamp: 12.90s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Sem Detecção
+  Objetos detectados: 
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 18:
+  Frame: 388
+  Timestamp: 12.93s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Sem Detecção
+  Objetos detectados: 
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 19:
+  Frame: 389
+  Timestamp: 12.97s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Sem Detecção
+  Objetos detectados: 
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 20:
+  Frame: 390
+  Timestamp: 13.00s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Sem Detecção
+  Objetos detectados: 
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 21:
+  Frame: 541
+  Timestamp: 18.03s
+  Tipo: Movimento Brusco
+  Atividade no momento: Sem Detecção
+  Objetos detectados: person
+  Intensidade de Movimento: 0.874
+  Número de Rostos: 0
+
+Anomalia 22:
+  Frame: 721
+  Timestamp: 24.03s
+  Tipo: Movimento Brusco
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person, cup
+  Intensidade de Movimento: 0.888
+  Número de Rostos: 1
+
+Anomalia 23:
+  Frame: 722
+  Timestamp: 24.07s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person, cup
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 24:
+  Frame: 723
+  Timestamp: 24.10s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 25:
+  Frame: 724
+  Timestamp: 24.13s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 26:
+  Frame: 725
+  Timestamp: 24.17s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 27:
+  Frame: 726
+  Timestamp: 24.20s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 28:
+  Frame: 727
+  Timestamp: 24.23s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 2
+
+Anomalia 29:
+  Frame: 728
+  Timestamp: 24.27s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 30:
+  Frame: 729
+  Timestamp: 24.30s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 2
+
+Anomalia 31:
+  Frame: 730
+  Timestamp: 24.33s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 32:
+  Frame: 731
+  Timestamp: 24.37s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 2
+
+Anomalia 33:
+  Frame: 732
+  Timestamp: 24.40s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 2
+
+Anomalia 34:
+  Frame: 733
+  Timestamp: 24.43s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 2
+
+Anomalia 35:
+  Frame: 734
+  Timestamp: 24.47s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 36:
+  Frame: 735
+  Timestamp: 24.50s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 37:
+  Frame: 736
+  Timestamp: 24.53s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 38:
+  Frame: 737
+  Timestamp: 24.57s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 2
+
+Anomalia 39:
+  Frame: 738
+  Timestamp: 24.60s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 2
+
+Anomalia 40:
+  Frame: 739
+  Timestamp: 24.63s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 2
+
+Anomalia 41:
+  Frame: 740
+  Timestamp: 24.67s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 2
+
+Anomalia 42:
+  Frame: 741
+  Timestamp: 24.70s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 2
+
+Anomalia 43:
+  Frame: 862
+  Timestamp: 28.73s
+  Tipo: Mudança de Pessoas na Cena
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 4
+
+Anomalia 44:
+  Frame: 863
+  Timestamp: 28.77s
+  Tipo: Mudança de Pessoas na Cena
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 4
+
+Anomalia 45:
+  Frame: 901
+  Timestamp: 30.03s
+  Tipo: Movimento Brusco
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.936
+  Número de Rostos: 1
+
+Anomalia 46:
+  Frame: 955
+  Timestamp: 31.83s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.004
+  Número de Rostos: 1
+
+Anomalia 47:
+  Frame: 956
+  Timestamp: 31.87s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.002
+  Número de Rostos: 1
+
+Anomalia 48:
+  Frame: 1081
+  Timestamp: 36.03s
+  Tipo: Movimento Brusco
+  Atividade no momento: Sem Detecção
+  Objetos detectados: person
+  Intensidade de Movimento: 0.915
+  Número de Rostos: 0
+
+Anomalia 49:
+  Frame: 1214
+  Timestamp: 40.47s
+  Tipo: Movimento Brusco
+  Atividade no momento: Sem Detecção
+  Objetos detectados: person
+  Intensidade de Movimento: 0.051
+  Número de Rostos: 0
+
+Anomalia 50:
+  Frame: 1215
+  Timestamp: 40.50s
+  Tipo: Movimento Brusco
+  Atividade no momento: Sem Detecção
+  Objetos detectados: person
+  Intensidade de Movimento: 0.057
+  Número de Rostos: 0
+
+Anomalia 51:
+  Frame: 1217
+  Timestamp: 40.57s
+  Tipo: Movimento Brusco
+  Atividade no momento: Sem Detecção
+  Objetos detectados: person
+  Intensidade de Movimento: 0.056
+  Número de Rostos: 0
+
+Anomalia 52:
+  Frame: 1261
+  Timestamp: 42.03s
+  Tipo: Movimento Brusco
+  Atividade no momento: Sem Detecção
+  Objetos detectados: person
+  Intensidade de Movimento: 0.741
+  Número de Rostos: 0
+
+Anomalia 53:
+  Frame: 1441
+  Timestamp: 48.03s
+  Tipo: Movimento Brusco
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.952
+  Número de Rostos: 1
+
+Anomalia 54:
+  Frame: 1442
+  Timestamp: 48.07s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 55:
+  Frame: 1483
+  Timestamp: 49.43s
+  Tipo: Movimento Brusco
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.083
+  Número de Rostos: 1
+
+Anomalia 56:
+  Frame: 1484
+  Timestamp: 49.47s
+  Tipo: Movimento Brusco
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.095
+  Número de Rostos: 1
+
+Anomalia 57:
+  Frame: 1607
+  Timestamp: 53.57s
+  Tipo: Movimento Brusco
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.127
+  Número de Rostos: 1
+
+Anomalia 58:
+  Frame: 1608
+  Timestamp: 53.60s
+  Tipo: Movimento Brusco
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.149
+  Número de Rostos: 1
+
+Anomalia 59:
+  Frame: 1621
+  Timestamp: 54.03s
+  Tipo: Movimento Brusco
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.724
+  Número de Rostos: 1
+
+Anomalia 60:
+  Frame: 1622
+  Timestamp: 54.07s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 61:
+  Frame: 1623
+  Timestamp: 54.10s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.001
+  Número de Rostos: 1
+
+Anomalia 62:
+  Frame: 1624
+  Timestamp: 54.13s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 63:
+  Frame: 1625
+  Timestamp: 54.17s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.001
+  Número de Rostos: 1
+
+Anomalia 64:
+  Frame: 1626
+  Timestamp: 54.20s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 65:
+  Frame: 1627
+  Timestamp: 54.23s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 66:
+  Frame: 1628
+  Timestamp: 54.27s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 67:
+  Frame: 1629
+  Timestamp: 54.30s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 68:
+  Frame: 1630
+  Timestamp: 54.33s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.001
+  Número de Rostos: 1
+
+Anomalia 69:
+  Frame: 1631
+  Timestamp: 54.37s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.001
+  Número de Rostos: 1
+
+Anomalia 70:
+  Frame: 1632
+  Timestamp: 54.40s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 71:
+  Frame: 1633
+  Timestamp: 54.43s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 72:
+  Frame: 1634
+  Timestamp: 54.47s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.001
+  Número de Rostos: 1
+
+Anomalia 73:
+  Frame: 1635
+  Timestamp: 54.50s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.001
+  Número de Rostos: 1
+
+Anomalia 74:
+  Frame: 1636
+  Timestamp: 54.53s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.002
+  Número de Rostos: 1
+
+Anomalia 75:
+  Frame: 1711
+  Timestamp: 57.03s
+  Tipo: Movimento Brusco
+  Atividade no momento: Sem Detecção
+  Objetos detectados: 
+  Intensidade de Movimento: 0.878
+  Número de Rostos: 0
+
+Anomalia 76:
+  Frame: 1723
+  Timestamp: 57.43s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Sem Detecção
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 77:
+  Frame: 1727
+  Timestamp: 57.57s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Sem Detecção
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 78:
+  Frame: 1730
+  Timestamp: 57.67s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Sem Detecção
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 79:
+  Frame: 1734
+  Timestamp: 57.80s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Sem Detecção
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 80:
+  Frame: 1738
+  Timestamp: 57.93s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Sem Detecção
+  Objetos detectados: 
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 81:
+  Frame: 1742
+  Timestamp: 58.07s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Sem Detecção
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 82:
+  Frame: 1745
+  Timestamp: 58.17s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Sem Detecção
+  Objetos detectados: 
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 83:
+  Frame: 1749
+  Timestamp: 58.30s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Sem Detecção
+  Objetos detectados: 
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 84:
+  Frame: 1753
+  Timestamp: 58.43s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: 
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 85:
+  Frame: 1757
+  Timestamp: 58.57s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Sem Detecção
+  Objetos detectados: 
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 86:
+  Frame: 1760
+  Timestamp: 58.67s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: 
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 87:
+  Frame: 1764
+  Timestamp: 58.80s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: 
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 2
+
+Anomalia 88:
+  Frame: 1768
+  Timestamp: 58.93s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: 
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 89:
+  Frame: 1772
+  Timestamp: 59.07s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: vase
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 90:
+  Frame: 1775
+  Timestamp: 59.17s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: 
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 2
+
+Anomalia 91:
+  Frame: 1779
+  Timestamp: 59.30s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Sem Detecção
+  Objetos detectados: 
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 92:
+  Frame: 1783
+  Timestamp: 59.43s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Sem Detecção
+  Objetos detectados: 
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 93:
+  Frame: 1787
+  Timestamp: 59.57s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: 
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 94:
+  Frame: 1790
+  Timestamp: 59.67s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: vase
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 95:
+  Frame: 1794
+  Timestamp: 59.80s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 96:
+  Frame: 1798
+  Timestamp: 59.93s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Sem Detecção
+  Objetos detectados: 
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 97:
+  Frame: 1802
+  Timestamp: 60.07s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Sem Detecção
+  Objetos detectados: 
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 98:
+  Frame: 1805
+  Timestamp: 60.17s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Sem Detecção
+  Objetos detectados: 
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 99:
+  Frame: 1809
+  Timestamp: 60.30s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Sem Detecção
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 100:
+  Frame: 1813
+  Timestamp: 60.43s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Sem Detecção
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 101:
+  Frame: 1817
+  Timestamp: 60.57s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Sem Detecção
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 102:
+  Frame: 1820
+  Timestamp: 60.67s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Sem Detecção
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 103:
+  Frame: 1824
+  Timestamp: 60.80s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Sem Detecção
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 104:
+  Frame: 1828
+  Timestamp: 60.93s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Sem Detecção
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 105:
+  Frame: 1831
+  Timestamp: 61.03s
+  Tipo: Movimento Brusco
+  Atividade no momento: Sem Detecção
+  Objetos detectados: person
+  Intensidade de Movimento: 0.892
+  Número de Rostos: 0
+
+Anomalia 106:
+  Frame: 1832
+  Timestamp: 61.07s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Sem Detecção
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 107:
+  Frame: 1833
+  Timestamp: 61.10s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Sem Detecção
+  Objetos detectados: person
+  Intensidade de Movimento: 0.003
+  Número de Rostos: 0
+
+Anomalia 108:
+  Frame: 1834
+  Timestamp: 61.13s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Sem Detecção
+  Objetos detectados: person
+  Intensidade de Movimento: 0.002
+  Número de Rostos: 0
+
+Anomalia 109:
+  Frame: 1835
+  Timestamp: 61.17s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.002
+  Número de Rostos: 1
+
+Anomalia 110:
+  Frame: 1836
+  Timestamp: 61.20s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.002
+  Número de Rostos: 1
+
+Anomalia 111:
+  Frame: 1837
+  Timestamp: 61.23s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.002
+  Número de Rostos: 1
+
+Anomalia 112:
+  Frame: 1838
+  Timestamp: 61.27s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 113:
+  Frame: 1839
+  Timestamp: 61.30s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.002
+  Número de Rostos: 1
+
+Anomalia 114:
+  Frame: 1840
+  Timestamp: 61.33s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.002
+  Número de Rostos: 1
+
+Anomalia 115:
+  Frame: 1841
+  Timestamp: 61.37s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.002
+  Número de Rostos: 1
+
+Anomalia 116:
+  Frame: 1842
+  Timestamp: 61.40s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.002
+  Número de Rostos: 1
+
+Anomalia 117:
+  Frame: 1843
+  Timestamp: 61.43s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 118:
+  Frame: 1844
+  Timestamp: 61.47s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.002
+  Número de Rostos: 1
+
+Anomalia 119:
+  Frame: 1845
+  Timestamp: 61.50s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.002
+  Número de Rostos: 1
+
+Anomalia 120:
+  Frame: 1846
+  Timestamp: 61.53s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.002
+  Número de Rostos: 1
+
+Anomalia 121:
+  Frame: 1847
+  Timestamp: 61.57s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.002
+  Número de Rostos: 1
+
+Anomalia 122:
+  Frame: 1848
+  Timestamp: 61.60s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.002
+  Número de Rostos: 1
+
+Anomalia 123:
+  Frame: 1849
+  Timestamp: 61.63s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.002
+  Número de Rostos: 1
+
+Anomalia 124:
+  Frame: 1850
+  Timestamp: 61.67s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 125:
+  Frame: 1851
+  Timestamp: 61.70s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.002
+  Número de Rostos: 1
+
+Anomalia 126:
+  Frame: 1852
+  Timestamp: 61.73s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.002
+  Número de Rostos: 1
+
+Anomalia 127:
+  Frame: 2011
+  Timestamp: 67.03s
+  Tipo: Movimento Brusco
+  Atividade no momento: Sem Detecção
+  Objetos detectados: person, person
+  Intensidade de Movimento: 0.838
+  Número de Rostos: 0
+
+Anomalia 128:
+  Frame: 2191
+  Timestamp: 73.03s
+  Tipo: Movimento Brusco
+  Atividade no momento: Sem Detecção
+  Objetos detectados: person
+  Intensidade de Movimento: 0.576
+  Número de Rostos: 0
+
+Anomalia 129:
+  Frame: 2371
+  Timestamp: 79.03s
+  Tipo: Movimento Brusco
+  Atividade no momento: Sem Detecção
+  Objetos detectados: person
+  Intensidade de Movimento: 0.787
+  Número de Rostos: 0
+
+Anomalia 130:
+  Frame: 2401
+  Timestamp: 80.03s
+  Tipo: Movimento Brusco
+  Atividade no momento: None
+  Objetos detectados: person, laptop, person, chair, person, chair
+  Intensidade de Movimento: 0.832
+  Número de Rostos: 0
+
+Anomalia 131:
+  Frame: 2414
+  Timestamp: 80.47s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, laptop, person, chair, person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 132:
+  Frame: 2415
+  Timestamp: 80.50s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, laptop, person, chair, person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 133:
+  Frame: 2419
+  Timestamp: 80.63s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, laptop, person, chair, person, chair, chair, chair, chair
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 134:
+  Frame: 2425
+  Timestamp: 80.83s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, laptop, chair, person, person, chair, chair
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 135:
+  Frame: 2432
+  Timestamp: 81.07s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, laptop, chair, person, person, chair, person, chair, chair
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 136:
+  Frame: 2438
+  Timestamp: 81.27s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, person, chair, laptop, person, chair, chair
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 137:
+  Frame: 2444
+  Timestamp: 81.47s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, person, laptop, chair, person, chair, chair
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 138:
+  Frame: 2445
+  Timestamp: 81.50s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, person, laptop, chair, person, chair, chair
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 139:
+  Frame: 2449
+  Timestamp: 81.63s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, person, chair, laptop, person, chair
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 140:
+  Frame: 2455
+  Timestamp: 81.83s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, person, chair, person, laptop, chair
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 141:
+  Frame: 2462
+  Timestamp: 82.07s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, person, person, laptop, chair
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 142:
+  Frame: 2468
+  Timestamp: 82.27s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, person, laptop, person, chair
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 143:
+  Frame: 2474
+  Timestamp: 82.47s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, person, laptop, chair, person, potted plant
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 144:
+  Frame: 2475
+  Timestamp: 82.50s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, person, laptop, chair, person, potted plant
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 145:
+  Frame: 2479
+  Timestamp: 82.63s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, person, laptop, chair, potted plant
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 146:
+  Frame: 2485
+  Timestamp: 82.83s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, person, laptop, potted plant
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 147:
+  Frame: 2492
+  Timestamp: 83.07s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, potted plant, laptop, person, chair, chair
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 148:
+  Frame: 2498
+  Timestamp: 83.27s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, person, laptop, potted plant, chair
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 149:
+  Frame: 2504
+  Timestamp: 83.47s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, laptop, person, chair, chair, potted plant
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 150:
+  Frame: 2505
+  Timestamp: 83.50s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, laptop, person, chair, chair, potted plant
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 151:
+  Frame: 2509
+  Timestamp: 83.63s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, laptop, person, potted plant, chair, chair
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 152:
+  Frame: 2522
+  Timestamp: 84.07s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, laptop, chair, person, chair
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 153:
+  Frame: 2528
+  Timestamp: 84.27s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, laptop, person, chair, chair, potted plant
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 154:
+  Frame: 2534
+  Timestamp: 84.47s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, chair, laptop, person, person, chair
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 155:
+  Frame: 2535
+  Timestamp: 84.50s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, chair, person, laptop, chair, person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 156:
+  Frame: 2539
+  Timestamp: 84.63s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, laptop, chair, person, person, chair
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 157:
+  Frame: 2545
+  Timestamp: 84.83s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, laptop, chair, person, person, chair
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 158:
+  Frame: 2552
+  Timestamp: 85.07s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, person, person, laptop, chair, chair
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 159:
+  Frame: 2558
+  Timestamp: 85.27s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, laptop, person, chair, person, chair, laptop
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 160:
+  Frame: 2581
+  Timestamp: 86.03s
+  Tipo: Movimento Brusco
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, person, person, person, chair, dining table, chair, chair, chair, laptop
+  Intensidade de Movimento: 0.601
+  Número de Rostos: 1
+
+Anomalia 161:
+  Frame: 2582
+  Timestamp: 86.07s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, person, person, person, chair, dining table, chair, chair, chair, laptop
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 162:
+  Frame: 2588
+  Timestamp: 86.27s
+  Tipo: Inatividade Súbita
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, person, person, person, laptop, chair, chair, chair, chair, potted plant, laptop, dining table, chair
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 0
+
+Anomalia 163:
+  Frame: 2677
+  Timestamp: 89.23s
+  Tipo: Mudança de Pessoas na Cena
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, person, chair, chair, laptop, dining table, person, person, chair, potted plant, chair
+  Intensidade de Movimento: 0.051
+  Número de Rostos: 3
+
+Anomalia 164:
+  Frame: 2761
+  Timestamp: 92.03s
+  Tipo: Movimento Brusco
+  Atividade no momento: Sem Detecção
+  Objetos detectados: couch, book, potted plant, person
+  Intensidade de Movimento: 0.806
+  Número de Rostos: 0
+
+Anomalia 165:
+  Frame: 2941
+  Timestamp: 98.03s
+  Tipo: Movimento Brusco
+  Atividade no momento: None
+  Objetos detectados: laptop, cup, person, person
+  Intensidade de Movimento: 0.753
+  Número de Rostos: 0
+
+Anomalia 166:
+  Frame: 2991
+  Timestamp: 99.70s
+  Tipo: Movimento Brusco
+  Atividade no momento: Sem Detecção
+  Objetos detectados: person, person
+  Intensidade de Movimento: 0.074
+  Número de Rostos: 0
+
+Anomalia 167:
+  Frame: 3121
+  Timestamp: 104.03s
+  Tipo: Movimento Brusco
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person, person, person, person, chair, potted plant
+  Intensidade de Movimento: 0.699
+  Número de Rostos: 2
+
+Anomalia 168:
+  Frame: 3135
+  Timestamp: 104.50s
+  Tipo: Mudança de Pessoas na Cena
+  Atividade no momento: None
+  Objetos detectados: person, person, person, laptop, chair, chair, person, person, potted plant
+  Intensidade de Movimento: 0.029
+  Número de Rostos: 4
+
+Anomalia 169:
+  Frame: 3196
+  Timestamp: 106.53s
+  Tipo: Movimento Brusco
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, person, person, chair, person, potted plant, laptop, chair, chair
+  Intensidade de Movimento: 0.054
+  Número de Rostos: 1
+
+Anomalia 170:
+  Frame: 3197
+  Timestamp: 106.57s
+  Tipo: Movimento Brusco
+  Atividade no momento: Trabalhando (PC)
+  Objetos detectados: person, person, person, chair, person, potted plant, chair, laptop, chair
+  Intensidade de Movimento: 0.059
+  Número de Rostos: 2
+
+Anomalia 171:
+  Frame: 3301
+  Timestamp: 110.03s
+  Tipo: Mudança de Pessoas na Cena
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.795
+  Número de Rostos: 1
+
+Anomalia 172:
+  Frame: 3302
+  Timestamp: 110.07s
+  Tipo: Mudança de Pessoas na Cena
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.000
+  Número de Rostos: 1
+
+Anomalia 173:
+  Frame: 3303
+  Timestamp: 110.10s
+  Tipo: Mudança de Pessoas na Cena
+  Atividade no momento: Conversando / Ocioso
+  Objetos detectados: person
+  Intensidade de Movimento: 0.003
+  Número de Rostos: 1
