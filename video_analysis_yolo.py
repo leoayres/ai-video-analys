@@ -1,7 +1,8 @@
 """
-Sistema de Análise de Vídeo com IA usando YOLO
-Detecção automática de objetos e atividades
-Reconhecimento Facial + YOLO para máxima precisão
+Sistema de Análise de Vídeo com IA usando YOLO + DeepFace
+Detecção automática de objetos com YOLO
+Análise avançada de emoções com DeepFace
+Versão Premium com máxima precisão
 """
 
 import cv2
@@ -10,11 +11,13 @@ from collections import defaultdict, deque
 import json
 from datetime import datetime
 import os
+import warnings
+warnings.filterwarnings('ignore')
 
-print("Inicializando Sistema de Análise com YOLO...")
+print("Inicializando Sistema de Análise com YOLO + DeepFace...")
 print("="*70)
 
-# Verifica dependências
+# Verifica YOLO
 try:
     from ultralytics import YOLO
     print("✓ Ultralytics YOLO disponível")
@@ -24,21 +27,45 @@ except ImportError:
     print("\nPara instalar: pip install ultralytics")
     YOLO_AVAILABLE = False
 
-if not YOLO_AVAILABLE:
+# Verifica DeepFace
+try:
+    from deepface import DeepFace
+    print("✓ DeepFace disponível")
+    DEEPFACE_AVAILABLE = True
+except ImportError:
+    print("✗ DeepFace não instalado")
+    print("\nPara instalar: pip install deepface")
+    DEEPFACE_AVAILABLE = False
+
+if not YOLO_AVAILABLE or not DEEPFACE_AVAILABLE:
     print("\n" + "="*70)
-    print("INSTALANDO YOLO...")
+    print("INSTALANDO DEPENDÊNCIAS...")
     print("="*70)
     import subprocess
-    try:
-        subprocess.check_call(['pip', 'install', 'ultralytics'])
-        from ultralytics import YOLO
-        print("✓ YOLO instalado com sucesso!")
-        YOLO_AVAILABLE = True
-    except:
-        print("✗ Falha ao instalar YOLO")
-        print("\nUse a versão OpenCV como alternativa:")
-        print("  python video_analysis.py input_video.mp4")
-        exit(1)
+    
+    if not YOLO_AVAILABLE:
+        try:
+            subprocess.check_call(['pip', 'install', 'ultralytics'])
+            from ultralytics import YOLO
+            print("✓ YOLO instalado!")
+            YOLO_AVAILABLE = True
+        except:
+            print("✗ Falha ao instalar YOLO")
+    
+    if not DEEPFACE_AVAILABLE:
+        try:
+            print("\nInstalando DeepFace (pode levar alguns minutos)...")
+            subprocess.check_call(['pip', 'install', 'deepface', 'tf-keras'])
+            from deepface import DeepFace
+            print("✓ DeepFace instalado!")
+            DEEPFACE_AVAILABLE = True
+        except:
+            print("✗ Falha ao instalar DeepFace")
+
+if not (YOLO_AVAILABLE and DEEPFACE_AVAILABLE):
+    print("\nUse a versão OpenCV como alternativa:")
+    print("  python video_analysis.py input_video.mp4")
+    exit(1)
 
 
 class YOLOVideoAnalyzer:
@@ -61,6 +88,19 @@ class YOLOVideoAnalyzer:
         self.face_cascade = cv2.CascadeClassifier(
             cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'
         )
+        
+        # Configuração DeepFace
+        self.use_deepface = DEEPFACE_AVAILABLE
+        self.deepface_cache = {}  # Cache para evitar reprocessamento
+        self.emotion_labels = {
+            'angry': 'Raiva',
+            'disgust': 'Nojo',
+            'fear': 'Medo',
+            'happy': 'Feliz',
+            'sad': 'Triste',
+            'surprise': 'Surpreso',
+            'neutral': 'Neutro'
+        }
         
         # Classes YOLO relevantes para atividades
         self.activity_objects = {
@@ -109,7 +149,7 @@ class YOLOVideoAnalyzer:
         return faces, gray
     
     def analyze_emotion(self, face_roi):
-        """Análise de emoção baseada em características faciais"""
+        """Análise de emoção básica (fallback se DeepFace falhar)"""
         mean_intensity = np.mean(face_roi)
         std_intensity = np.std(face_roi)
         
@@ -122,6 +162,63 @@ class YOLOVideoAnalyzer:
                 return "Neutro"
         else:
             return "Neutro"
+    
+    def analyze_emotion_deepface(self, face_img, frame_count):
+        """
+        Análise avançada de emoção usando DeepFace
+        """
+        if not self.use_deepface:
+            return self.analyze_emotion(face_img)
+        
+        try:
+            # DeepFace processa apenas a cada 5 frames para performance
+            # (emoções não mudam tão rapidamente)
+            if frame_count % 5 != 0:
+                # Retorna última emoção conhecida
+                if frame_count - 1 in self.deepface_cache:
+                    return self.deepface_cache[frame_count - 1]
+            
+            # Converte para RGB (DeepFace usa RGB)
+            if len(face_img.shape) == 2:  # Se for grayscale
+                face_rgb = cv2.cvtColor(face_img, cv2.COLOR_GRAY2RGB)
+            else:
+                face_rgb = cv2.cvtColor(face_img, cv2.COLOR_BGR2RGB)
+            
+            # Redimensiona para tamanho adequado (mínimo 48x48)
+            h, w = face_rgb.shape[:2]
+            if h < 48 or w < 48:
+                scale = max(48/h, 48/w)
+                new_h, new_w = int(h*scale), int(w*scale)
+                face_rgb = cv2.resize(face_rgb, (new_w, new_h))
+            
+            # Analisa emoção com DeepFace
+            result = DeepFace.analyze(
+                face_rgb,
+                actions=['emotion'],
+                enforce_detection=False,
+                detector_backend='opencv',
+                silent=True
+            )
+            
+            # Extrai emoção dominante
+            if isinstance(result, list):
+                result = result[0]
+            
+            emotion_scores = result['emotion']
+            dominant_emotion = max(emotion_scores, key=emotion_scores.get)
+            confidence = emotion_scores[dominant_emotion]
+            
+            # Traduz para português
+            emotion_pt = self.emotion_labels.get(dominant_emotion, dominant_emotion)
+            
+            # Armazena no cache
+            self.deepface_cache[frame_count] = emotion_pt
+            
+            return emotion_pt
+            
+        except Exception as e:
+            # Se falhar, usa método básico
+            return self.analyze_emotion(face_img)
     
     def detect_objects_yolo(self, frame):
         """Detecta objetos usando YOLO"""
@@ -278,10 +375,15 @@ class YOLOVideoAnalyzer:
         return is_anomaly, anomaly_type
     
     def process_video(self, output_path='video_analisado_yolo.mp4', show_preview=False):
-        """Processa o vídeo completo com YOLO"""
+        """Processa o vídeo completo com YOLO + DeepFace"""
         print("\n" + "="*70)
-        print("INICIANDO PROCESSAMENTO COM YOLO")
+        print("INICIANDO PROCESSAMENTO COM YOLO + DEEPFACE")
         print("="*70)
+        
+        if self.use_deepface:
+            print("✓ DeepFace ativado para análise avançada de emoções")
+            print("  Modelos: emotion detection")
+        
         print()
         
         fourcc = cv2.VideoWriter_fourcc(*'mp4v')
@@ -322,11 +424,16 @@ class YOLOVideoAnalyzer:
             for i, (x, y, w, h) in enumerate(faces):
                 cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
                 
-                face_roi = gray[y:y+h, x:x+w]
-                emotion = self.analyze_emotion(face_roi)
+                # Extrai ROI da face
+                face_roi_gray = gray[y:y+h, x:x+w]
+                face_roi_color = frame[y:y+h, x:x+w]
+                
+                # Analisa emoção com DeepFace
+                emotion = self.analyze_emotion_deepface(face_roi_color, frame_count)
                 frame_emotions.append(emotion)
                 self.emotions_detected[emotion] += 1
                 
+                # Adiciona texto com a emoção
                 cv2.putText(frame, f'Rosto {i+1}: {emotion}', (x, y-10),
                            cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
             
@@ -376,7 +483,9 @@ class YOLOVideoAnalyzer:
                        cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
             cv2.putText(frame, f'Movimento: {motion_intensity:.3f}', (10, info_y + 100),
                        cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
-            cv2.putText(frame, 'Powered by YOLOv8', (10, info_y + 120),
+            
+            tech_label = 'YOLOv8 + DeepFace' if self.use_deepface else 'YOLOv8'
+            cv2.putText(frame, f'Powered by {tech_label}', (10, info_y + 120),
                        cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 255), 1)
             
             # Salva dados do frame
@@ -440,8 +549,9 @@ class YOLOVideoAnalyzer:
                 'data_analise': datetime.now().isoformat(),
                 'fps': self.fps,
                 'resolucao': f'{self.frame_width}x{self.frame_height}',
-                'tecnologia': 'YOLOv8 + OpenCV',
-                'modelo_yolo': 'YOLOv8-nano'
+                'tecnologia': 'YOLOv8 + DeepFace + OpenCV' if self.use_deepface else 'YOLOv8 + OpenCV',
+                'modelo_yolo': 'YOLOv8-nano',
+                'modelo_emocoes': 'DeepFace' if self.use_deepface else 'Básico'
             },
             'metricas_gerais': {
                 'total_frames_analisados': self.total_frames,
@@ -614,8 +724,9 @@ def main():
     print(f"Número de Anomalias Detectadas: {report['metricas_gerais']['numero_anomalias_detectadas']}")
     print(f"Objetos Únicos Detectados: {report['metricas_gerais']['total_objetos_unicos_detectados']}")
     print("=" * 80)
-    print("\n✓ Análise com YOLO oferece:")
-    print("  • Detecção automática de 80+ tipos de objetos")
+    print("\n✓ Análise com YOLO + DeepFace oferece:")
+    print("  • Detecção automática de 80+ tipos de objetos (YOLO)")
+    print("  • Análise avançada de 7 emoções (DeepFace)")
     print("  • Identificação precisa de atividades baseada em contexto")
     print("  • Confiança percentual para cada detecção")
     print("  • Rastreamento de objetos específicos (laptop, celular, livro, etc.)")
