@@ -5,11 +5,12 @@ RELATÓRIO DE ANÁLISE DE VÍDEO COM YOLO
 INFORMAÇÕES DO VÍDEO
 --------------------------------------------------------------------------------
 Video Path: input_video.mp4
-Data Analise: 2026-01-05T21:59:36.592744
+Data Analise: 2026-01-09T00:09:17.698580
 Fps: 30.0
 Resolucao: 1280x720
-Tecnologia: YOLOv8 + OpenCV
+Tecnologia: YOLOv8 + DeepFace + OpenCV
 Modelo Yolo: YOLOv8-nano
+Modelo Emocoes: DeepFace
 
 MÉTRICAS GERAIS
 --------------------------------------------------------------------------------
@@ -44,13 +45,17 @@ OBJETOS MAIS DETECTADOS
 
 EMOÇÕES DETECTADAS
 --------------------------------------------------------------------------------
-Neutro: 1498 detecções
-Feliz: 561 detecções
-Triste: 52 detecções
+Feliz: 689 detecções
+Neutro: 585 detecções
+Medo: 357 detecções
+Triste: 224 detecções
+Surpreso: 214 detecções
+Raiva: 41 detecções
+Nojo: 1 detecções
 
 RESUMO EXECUTIVO
 --------------------------------------------------------------------------------
-Emoção predominante: Neutro (1498 detecções)
+Emoção predominante: Feliz (689 detecções)
 
 Distribuição de Atividades (detectadas por YOLO):
   • 40.2% - Conversando / Ocioso (1338 frames)
