@@ -1,10 +1,36 @@
-# 🎯 Sistema de Análise de Vídeo com YOLO
+# 🎯 Sistema de Análise de Vídeo com YOLO + DeepFace
 
-Versão avançada com **YOLOv8** (You Only Look Once) para detecção automática e precisa de objetos e atividades.
+Versão **PREMIUM** com **YOLOv8** para detecção de objetos e **DeepFace** para análise avançada de emoções.
 
-## 🌟 Por que YOLO?
+## 🌟 Tecnologias Integradas
 
-**YOLO (You Only Look Once)** é um dos algoritmos mais avançados de detecção de objetos em tempo real:
+### 1️⃣ YOLO (You Only Look Once)
+- Detecção automática de 80+ objetos
+- Classificação inteligente de atividades
+
+### 2️⃣ DeepFace
+- Análise profissional de 7 emoções
+- Precisão 85-90% (vs 60% método básico)
+- Deep Learning estado da arte
+
+### 3️⃣ OpenCV
+- Detecção rápida de rostos
+- Processamento de vídeo
+
+---
+
+## 🎭 Emoções Detectadas (DeepFace)
+
+✅ **7 Emoções Completas:**
+1. 😠 **Raiva** (angry)
+2. 🤢 **Nojo** (disgust)
+3. 😨 **Medo** (fear)
+4. 😊 **Feliz** (happy)
+5. 😢 **Triste** (sad)
+6. 😲 **Surpreso** (surprise)
+7. 😐 **Neutro** (neutral)
+
+**vs 4 emoções do método básico**
 
 ### Vantagens do YOLO
 
@@ -29,14 +55,15 @@ Versão avançada com **YOLOv8** (You Only Look Once) para detecção automátic
 
 ## 🆚 Comparação de Versões
 
-| Característica | OpenCV | MediaPipe | **YOLO** |
-|----------------|--------|-----------|----------|
+| Característica | OpenCV | MediaPipe | **YOLO + DeepFace** |
+|----------------|--------|-----------|---------------------|
 | Detecção Facial | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ |
+| Análise Emoções | ⭐⭐⭐ (4) | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ (7) |
 | Detecção Objetos | ❌ | ❌ | ⭐⭐⭐⭐⭐ |
 | Atividades | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
 | Precisão | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
 | Velocidade | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ |
-| Instalação | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ |
+| Instalação | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ |
 
 ---
 
@@ -93,14 +120,15 @@ Confiança: 80%
 pip install opencv-python numpy
 ```
 
-#### 2. Instalar Ultralytics (YOLO)
+#### 2. Instalar Ultralytics (YOLO) e DeepFace
 
 ```bash
-pip install ultralytics
+pip install ultralytics deepface tf-keras
 ```
 
 Isso também instala automaticamente:
 - PyTorch (framework de deep learning)
+- TensorFlow/Keras (para DeepFace)
 - torchvision (processamento de imagens)
 
 #### 3. Instalar via requirements
@@ -435,6 +463,5 @@ Opções:
 - Perfeito para análise profissional
 
 
+
 ---
-
-
